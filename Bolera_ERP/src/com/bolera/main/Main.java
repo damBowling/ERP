@@ -12,6 +12,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		//Yo me llamo ralph
+		//yo si que me llamo ralph
 		//Ejemplo de conexión a la base de datos posteriormente probablemente la retiraremos
 		dBm = new DatabaseManager("jdbc:mysql://10.2.34.250:3306/", "florida", "qwerty","heartbreaker");
 	}
