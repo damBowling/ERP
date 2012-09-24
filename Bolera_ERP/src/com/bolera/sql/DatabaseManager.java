@@ -1,6 +1,7 @@
 package com.bolera.sql;
 
 import java.sql.DriverManager;
+import java.util.ArrayList;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
@@ -28,7 +29,6 @@ public class DatabaseManager {
 		this.username = username;
 		this.password = password;
 		this.database = database;
-		//almacenar que driver se va a usar//
 		drv = "com.mysql.jdbc.Driver";
 		//Conectar a la base de datos//
 		try {
@@ -45,5 +45,13 @@ public class DatabaseManager {
 			System.out.println("No se pudo conectar a la Base de Datos");
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Esto retorna todos los Clientes en una Lista
+	 * @return
+	 */
+	public ArrayList<String> getAllClientes(){
+		return null;
 	}
 }
