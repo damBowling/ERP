@@ -11,7 +11,7 @@ public class Main {
 	 * 
 	 * @param args Irrelevante, de serie
 	 */
-	// hola putitasdededee
+	// hola putitas
 	public static void main(String[] args) {
 		//Ejemplo de conexion a la base de datos posteriormente probablemente la retiraremos
 		dBm = new DatabaseManager("jdbc:mysql://10.2.34.250:3306/", "florida", "qwerty","heartbreaker");
