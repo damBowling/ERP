@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="conexion">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">vertrigo</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/mydb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping resource="entidades/VentaAlquiler.hbm.xml" />
+        <mapping resource="entidades/Reservas.hbm.xml" />
+        <mapping resource="entidades/Empleados.hbm.xml" />
+        <mapping resource="entidades/Accesorios.hbm.xml" />
+        <mapping resource="entidades/Puntuacion.hbm.xml" />
+        <mapping resource="entidades/Pedidos.hbm.xml" />
+        <mapping resource="entidades/Usuario.hbm.xml" />
+        <mapping resource="entidades/Socio.hbm.xml" />
+        <mapping resource="entidades/Clasificacion.hbm.xml" />
+        <mapping resource="entidades/Pistas.hbm.xml" />
+        <mapping resource="entidades/Proveedores.hbm.xml" />
+        <mapping resource="entidades/Partida.hbm.xml" />
+        <mapping resource="entidades/Ofertas.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

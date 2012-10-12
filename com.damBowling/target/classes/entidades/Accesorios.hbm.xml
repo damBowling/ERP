@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entidades.Accesorios" table="accesorios" catalog="mydb">
+        <id name="ref" type="java.lang.Integer">
+            <column name="ref" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="proveedores" class="entidades.Proveedores" fetch="select">
+            <column name="proveedor" length="9" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="precioCompra" type="float">
+            <column name="precio_compra" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="pvp" type="float">
+            <column name="pvp" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="idAlbaran" type="int">
+            <column name="id_albaran" not-null="true" />
+        </property>
+        <property name="stock" type="string">
+            <column name="stock" length="45" not-null="true" />
+        </property>
+        <set name="ventaAlquilers" table="venta_alquiler" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_accesorio" not-null="true" />
+            </key>
+            <one-to-many class="entidades.VentaAlquiler" />
+        </set>
+        <set name="ofertases" table="ofertas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="articulo" not-null="true" />
+            </key>
+            <one-to-many class="entidades.Ofertas" />
+        </set>
+        <set name="pedidoses" table="pedidos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idproducro" not-null="true" />
+            </key>
+            <one-to-many class="entidades.Pedidos" />
+        </set>
+    </class>
+</hibernate-mapping>

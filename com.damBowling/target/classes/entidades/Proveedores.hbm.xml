@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entidades.Proveedores" table="proveedores" catalog="mydb">
+        <id name="cif" type="string">
+            <column name="cif" length="9" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreEmpresa" type="string">
+            <column name="nombre_empresa" length="45" not-null="true" />
+        </property>
+        <property name="telefono" type="int">
+            <column name="telefono" not-null="true" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="90" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="45" not-null="true" />
+        </property>
+        <property name="nombreContacto" type="string">
+            <column name="nombre_contacto" length="45" />
+        </property>
+        <set name="accesorioses" table="accesorios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="proveedor" length="9" not-null="true" />
+            </key>
+            <one-to-many class="entidades.Accesorios" />
+        </set>
+    </class>
+</hibernate-mapping>

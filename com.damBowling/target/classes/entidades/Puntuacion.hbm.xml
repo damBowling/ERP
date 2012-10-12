@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entidades.Puntuacion" table="puntuacion" catalog="mydb">
+        <composite-id name="id" class="entidades.PuntuacionId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="idCliente" type="int">
+                <column name="id_cliente" />
+            </key-property>
+            <key-property name="puntuacion" type="int">
+                <column name="puntuacion" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="socio" class="entidades.Socio" update="false" insert="false" fetch="select">
+            <column name="id_cliente" not-null="true" />
+        </many-to-one>
+        <many-to-one name="partida" class="entidades.Partida" fetch="select">
+            <column name="id_partida" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
