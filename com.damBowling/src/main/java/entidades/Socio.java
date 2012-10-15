@@ -1,6 +1,6 @@
 package entidades;
 
-// Generated 13-oct-2012 1:52:26 by Hibernate Tools 3.4.0.CR1
+// Generated 15-oct-2012 13:40:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +21,7 @@ public class Socio implements java.io.Serializable {
 	private byte[] foto;
 	private String correo;
 	private Integer cuentaCorriente;
+	private Set alquilereses = new HashSet(0);
 	private Set reservases = new HashSet(0);
 	private Set puntuacions = new HashSet(0);
 	private Set clasificacions = new HashSet(0);
@@ -38,8 +39,8 @@ public class Socio implements java.io.Serializable {
 
 	public Socio(String dni, String nombre, String apellido1, String apellido2,
 			Integer telefono, String direccion, String poblacion, byte[] foto,
-			String correo, Integer cuentaCorriente, Set reservases,
-			Set puntuacions, Set clasificacions, Set usuarios) {
+			String correo, Integer cuentaCorriente, Set alquilereses,
+			Set reservases, Set puntuacions, Set clasificacions, Set usuarios) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
@@ -50,6 +51,7 @@ public class Socio implements java.io.Serializable {
 		this.foto = foto;
 		this.correo = correo;
 		this.cuentaCorriente = cuentaCorriente;
+		this.alquilereses = alquilereses;
 		this.reservases = reservases;
 		this.puntuacions = puntuacions;
 		this.clasificacions = clasificacions;
@@ -142,6 +144,14 @@ public class Socio implements java.io.Serializable {
 
 	public void setCuentaCorriente(Integer cuentaCorriente) {
 		this.cuentaCorriente = cuentaCorriente;
+	}
+
+	public Set getAlquilereses() {
+		return this.alquilereses;
+	}
+
+	public void setAlquilereses(Set alquilereses) {
+		this.alquilereses = alquilereses;
 	}
 
 	public Set getReservases() {

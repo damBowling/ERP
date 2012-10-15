@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 15-oct-2012 13:40:27 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="entidades.Usuario" table="usuario" catalog="mydb">
+    <class name="entidades.Usuario" table="usuario" catalog="mybolosdb">
         <composite-id name="id" class="entidades.UsuarioId">
             <key-property name="id" type="int">
                 <column name="id" />
@@ -22,7 +22,7 @@
             <column name="pass" length="45" not-null="true" />
         </property>
         <property name="fraseDePaso" type="string">
-            <column name="frase_de_paso" length="10" not-null="true" />
+            <column name="frase_de_paso" length="10" />
         </property>
     </class>
 </hibernate-mapping>

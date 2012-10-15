@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 15-oct-2012 13:40:27 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="entidades.Pedidos" table="pedidos" catalog="mydb">
+    <class name="entidades.Pedidos" table="pedidos" catalog="mybolosdb">
         <id name="idPedido" type="java.lang.Integer">
-            <column name="`id pedido`" />
+            <column name="id_pedido" />
             <generator class="identity" />
         </id>
         <many-to-one name="empleados" class="entidades.Empleados" fetch="select">

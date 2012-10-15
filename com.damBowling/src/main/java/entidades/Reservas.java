@@ -1,6 +1,6 @@
 package entidades;
 
-// Generated 13-oct-2012 1:52:26 by Hibernate Tools 3.4.0.CR1
+// Generated 15-oct-2012 13:40:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ public class Reservas implements java.io.Serializable {
 	private Integer id;
 	private Socio socio;
 	private Empleados empleados;
-	private Pistas pistas;
+	private int pista;
 	private Date fechaInicio;
 	private Date fechaFin;
 	private boolean anulado;
@@ -20,11 +20,11 @@ public class Reservas implements java.io.Serializable {
 	public Reservas() {
 	}
 
-	public Reservas(Socio socio, Empleados empleados, Pistas pistas,
+	public Reservas(Socio socio, Empleados empleados, int pista,
 			Date fechaInicio, Date fechaFin, boolean anulado) {
 		this.socio = socio;
 		this.empleados = empleados;
-		this.pistas = pistas;
+		this.pista = pista;
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.anulado = anulado;
@@ -54,12 +54,12 @@ public class Reservas implements java.io.Serializable {
 		this.empleados = empleados;
 	}
 
-	public Pistas getPistas() {
-		return this.pistas;
+	public int getPista() {
+		return this.pista;
 	}
 
-	public void setPistas(Pistas pistas) {
-		this.pistas = pistas;
+	public void setPista(int pista) {
+		this.pista = pista;
 	}
 
 	public Date getFechaInicio() {

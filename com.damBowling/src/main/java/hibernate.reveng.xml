@@ -2,17 +2,17 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="mydb" match-name="accesorios"/>
-  <table-filter match-catalog="mydb" match-name="clasificacion"/>
-  <table-filter match-catalog="mydb" match-name="empleados"/>
-  <table-filter match-catalog="mydb" match-name="ofertas"/>
-  <table-filter match-catalog="mydb" match-name="partida"/>
-  <table-filter match-catalog="mydb" match-name="pedidos"/>
-  <table-filter match-catalog="mydb" match-name="pistas"/>
-  <table-filter match-catalog="mydb" match-name="proveedores"/>
-  <table-filter match-catalog="mydb" match-name="puntuacion"/>
-  <table-filter match-catalog="mydb" match-name="reservas"/>
-  <table-filter match-catalog="mydb" match-name="socio"/>
-  <table-filter match-catalog="mydb" match-name="usuario"/>
-  <table-filter match-catalog="mydb" match-name="venta_alquiler"/>
+  <table-filter match-catalog="mybolosdb" match-name="accesorios"/>
+  <table-filter match-catalog="mybolosdb" match-name="alquileres"/>
+  <table-filter match-catalog="mybolosdb" match-name="clasificacion"/>
+  <table-filter match-catalog="mybolosdb" match-name="empleados"/>
+  <table-filter match-catalog="mybolosdb" match-name="ofertas"/>
+  <table-filter match-catalog="mybolosdb" match-name="partida"/>
+  <table-filter match-catalog="mybolosdb" match-name="pedidos"/>
+  <table-filter match-catalog="mybolosdb" match-name="proveedores"/>
+  <table-filter match-catalog="mybolosdb" match-name="puntuacion"/>
+  <table-filter match-catalog="mybolosdb" match-name="reservas"/>
+  <table-filter match-catalog="mybolosdb" match-name="socio"/>
+  <table-filter match-catalog="mybolosdb" match-name="usuario"/>
+  <table-filter match-catalog="mybolosdb" match-name="ventas"/>
 </hibernate-reverse-engineering>

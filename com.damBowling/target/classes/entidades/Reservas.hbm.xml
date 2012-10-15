@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 15-oct-2012 13:40:27 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="entidades.Reservas" table="reservas" catalog="mydb">
+    <class name="entidades.Reservas" table="reservas" catalog="mybolosdb">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />
@@ -14,9 +14,9 @@
         <many-to-one name="empleados" class="entidades.Empleados" fetch="select">
             <column name="id_empleado" length="9" not-null="true" />
         </many-to-one>
-        <many-to-one name="pistas" class="entidades.Pistas" fetch="select">
-            <column name="id_pista" not-null="true" />
-        </many-to-one>
+        <property name="pista" type="int">
+            <column name="pista" not-null="true" />
+        </property>
         <property name="fechaInicio" type="timestamp">
             <column name="fecha_inicio" length="19" not-null="true" />
         </property>

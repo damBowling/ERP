@@ -1,6 +1,6 @@
 package entidades;
 
-// Generated 13-oct-2012 1:52:26 by Hibernate Tools 3.4.0.CR1
+// Generated 15-oct-2012 13:40:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -17,9 +17,10 @@ public class Accesorios implements java.io.Serializable {
 	private float pvp;
 	private int idAlbaran;
 	private String stock;
-	private Set ventaAlquilers = new HashSet(0);
+	private Set ventases = new HashSet(0);
 	private Set ofertases = new HashSet(0);
 	private Set pedidoses = new HashSet(0);
+	private Set alquilereses = new HashSet(0);
 
 	public Accesorios() {
 	}
@@ -36,16 +37,17 @@ public class Accesorios implements java.io.Serializable {
 
 	public Accesorios(Proveedores proveedores, String nombre,
 			float precioCompra, float pvp, int idAlbaran, String stock,
-			Set ventaAlquilers, Set ofertases, Set pedidoses) {
+			Set ventases, Set ofertases, Set pedidoses, Set alquilereses) {
 		this.proveedores = proveedores;
 		this.nombre = nombre;
 		this.precioCompra = precioCompra;
 		this.pvp = pvp;
 		this.idAlbaran = idAlbaran;
 		this.stock = stock;
-		this.ventaAlquilers = ventaAlquilers;
+		this.ventases = ventases;
 		this.ofertases = ofertases;
 		this.pedidoses = pedidoses;
+		this.alquilereses = alquilereses;
 	}
 
 	public Integer getRef() {
@@ -104,12 +106,12 @@ public class Accesorios implements java.io.Serializable {
 		this.stock = stock;
 	}
 
-	public Set getVentaAlquilers() {
-		return this.ventaAlquilers;
+	public Set getVentases() {
+		return this.ventases;
 	}
 
-	public void setVentaAlquilers(Set ventaAlquilers) {
-		this.ventaAlquilers = ventaAlquilers;
+	public void setVentases(Set ventases) {
+		this.ventases = ventases;
 	}
 
 	public Set getOfertases() {
@@ -126,6 +128,14 @@ public class Accesorios implements java.io.Serializable {
 
 	public void setPedidoses(Set pedidoses) {
 		this.pedidoses = pedidoses;
+	}
+
+	public Set getAlquilereses() {
+		return this.alquilereses;
+	}
+
+	public void setAlquilereses(Set alquilereses) {
+		this.alquilereses = alquilereses;
 	}
 
 }

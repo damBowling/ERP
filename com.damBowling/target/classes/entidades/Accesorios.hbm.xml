@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 13-oct-2012 1:52:27 by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 15-oct-2012 13:40:27 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="entidades.Accesorios" table="accesorios" catalog="mydb">
+    <class name="entidades.Accesorios" table="accesorios" catalog="mybolosdb">
         <id name="ref" type="java.lang.Integer">
             <column name="ref" />
             <generator class="identity" />
@@ -26,11 +26,11 @@
         <property name="stock" type="string">
             <column name="stock" length="45" not-null="true" />
         </property>
-        <set name="ventaAlquilers" table="venta_alquiler" inverse="true" lazy="true" fetch="select">
+        <set name="ventases" table="ventas" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="id_accesorio" not-null="true" />
             </key>
-            <one-to-many class="entidades.VentaAlquiler" />
+            <one-to-many class="entidades.Ventas" />
         </set>
         <set name="ofertases" table="ofertas" inverse="true" lazy="true" fetch="select">
             <key>
@@ -43,6 +43,12 @@
                 <column name="idproducro" not-null="true" />
             </key>
             <one-to-many class="entidades.Pedidos" />
+        </set>
+        <set name="alquilereses" table="alquileres" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_accesorio" not-null="true" />
+            </key>
+            <one-to-many class="entidades.Alquileres" />
         </set>
     </class>
 </hibernate-mapping>

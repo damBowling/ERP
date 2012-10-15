@@ -1,6 +1,6 @@
 package entidades;
 
-// Generated 13-oct-2012 1:52:26 by Hibernate Tools 3.4.0.CR1
+// Generated 15-oct-2012 13:40:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -12,20 +12,20 @@ import java.util.Set;
 public class Partida implements java.io.Serializable {
 
 	private Integer id;
-	private Pistas pistas;
+	private int pista;
 	private Date fecha;
 	private Set puntuacions = new HashSet(0);
 
 	public Partida() {
 	}
 
-	public Partida(Pistas pistas, Date fecha) {
-		this.pistas = pistas;
+	public Partida(int pista, Date fecha) {
+		this.pista = pista;
 		this.fecha = fecha;
 	}
 
-	public Partida(Pistas pistas, Date fecha, Set puntuacions) {
-		this.pistas = pistas;
+	public Partida(int pista, Date fecha, Set puntuacions) {
+		this.pista = pista;
 		this.fecha = fecha;
 		this.puntuacions = puntuacions;
 	}
@@ -38,12 +38,12 @@ public class Partida implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Pistas getPistas() {
-		return this.pistas;
+	public int getPista() {
+		return this.pista;
 	}
 
-	public void setPistas(Pistas pistas) {
-		this.pistas = pistas;
+	public void setPista(int pista) {
+		this.pista = pista;
 	}
 
 	public Date getFecha() {

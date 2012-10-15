@@ -1,6 +1,6 @@
 package entidades;
 
-// Generated 13-oct-2012 1:52:26 by Hibernate Tools 3.4.0.CR1
+// Generated 15-oct-2012 13:40:25 by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,9 +12,10 @@ public class Empleados implements java.io.Serializable {
 
 	private String dniEmp;
 	private String nombre;
-	private String apellidos;
-	private String direccion;
+	private String apellido1;
+	private String apellido2;
 	private int telefono;
+	private String direccion;
 	private String poblacion;
 	private String nus;
 	private int cp;
@@ -22,20 +23,21 @@ public class Empleados implements java.io.Serializable {
 	private byte[] foto;
 	private Set usuarios = new HashSet(0);
 	private Set pedidoses = new HashSet(0);
-	private Set ventaAlquilers = new HashSet(0);
+	private Set ventases = new HashSet(0);
 	private Set reservases = new HashSet(0);
 
 	public Empleados() {
 	}
 
-	public Empleados(String dniEmp, String nombre, String apellidos,
-			String direccion, int telefono, String poblacion, String nus,
-			int cp, String cc, byte[] foto) {
+	public Empleados(String dniEmp, String nombre, String apellido1,
+			String apellido2, int telefono, String direccion, String poblacion,
+			String nus, int cp, String cc, byte[] foto) {
 		this.dniEmp = dniEmp;
 		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.direccion = direccion;
+		this.apellido1 = apellido1;
+		this.apellido2 = apellido2;
 		this.telefono = telefono;
+		this.direccion = direccion;
 		this.poblacion = poblacion;
 		this.nus = nus;
 		this.cp = cp;
@@ -43,15 +45,16 @@ public class Empleados implements java.io.Serializable {
 		this.foto = foto;
 	}
 
-	public Empleados(String dniEmp, String nombre, String apellidos,
-			String direccion, int telefono, String poblacion, String nus,
-			int cp, String cc, byte[] foto, Set usuarios, Set pedidoses,
-			Set ventaAlquilers, Set reservases) {
+	public Empleados(String dniEmp, String nombre, String apellido1,
+			String apellido2, int telefono, String direccion, String poblacion,
+			String nus, int cp, String cc, byte[] foto, Set usuarios,
+			Set pedidoses, Set ventases, Set reservases) {
 		this.dniEmp = dniEmp;
 		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.direccion = direccion;
+		this.apellido1 = apellido1;
+		this.apellido2 = apellido2;
 		this.telefono = telefono;
+		this.direccion = direccion;
 		this.poblacion = poblacion;
 		this.nus = nus;
 		this.cp = cp;
@@ -59,7 +62,7 @@ public class Empleados implements java.io.Serializable {
 		this.foto = foto;
 		this.usuarios = usuarios;
 		this.pedidoses = pedidoses;
-		this.ventaAlquilers = ventaAlquilers;
+		this.ventases = ventases;
 		this.reservases = reservases;
 	}
 
@@ -79,20 +82,20 @@ public class Empleados implements java.io.Serializable {
 		this.nombre = nombre;
 	}
 
-	public String getApellidos() {
-		return this.apellidos;
+	public String getApellido1() {
+		return this.apellido1;
 	}
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+	public void setApellido1(String apellido1) {
+		this.apellido1 = apellido1;
 	}
 
-	public String getDireccion() {
-		return this.direccion;
+	public String getApellido2() {
+		return this.apellido2;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setApellido2(String apellido2) {
+		this.apellido2 = apellido2;
 	}
 
 	public int getTelefono() {
@@ -101,6 +104,14 @@ public class Empleados implements java.io.Serializable {
 
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
+	}
+
+	public String getDireccion() {
+		return this.direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 	public String getPoblacion() {
@@ -159,12 +170,12 @@ public class Empleados implements java.io.Serializable {
 		this.pedidoses = pedidoses;
 	}
 
-	public Set getVentaAlquilers() {
-		return this.ventaAlquilers;
+	public Set getVentases() {
+		return this.ventases;
 	}
 
-	public void setVentaAlquilers(Set ventaAlquilers) {
-		this.ventaAlquilers = ventaAlquilers;
+	public void setVentases(Set ventases) {
+		this.ventases = ventases;
 	}
 
 	public Set getReservases() {

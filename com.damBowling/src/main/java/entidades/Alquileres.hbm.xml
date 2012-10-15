@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15-oct-2012 13:40:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entidades.Alquileres" table="alquileres" catalog="mybolosdb">
+        <id name="idAlquiler" type="java.lang.Integer">
+            <column name="id_alquiler" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="socio" class="entidades.Socio" fetch="select">
+            <column name="num_socio" not-null="true" />
+        </many-to-one>
+        <many-to-one name="accesorios" class="entidades.Accesorios" fetch="select">
+            <column name="id_accesorio" not-null="true" />
+        </many-to-one>
+        <property name="fechaInicio" type="string">
+            <column name="fecha_inicio" length="45" not-null="true" />
+        </property>
+        <property name="fechaDevolucionAlquiler" type="string">
+            <column name="fecha_devolucion_alquiler" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
